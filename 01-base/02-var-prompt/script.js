@@ -13,4 +13,8 @@
 
     // your code here
 
+    (function() {
+        var name = window.prompt("Enter your name: ");
+        alert("Hello " + name + "!");
+
 })();
