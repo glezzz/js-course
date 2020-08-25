@@ -11,6 +11,16 @@
 
 (function() {
 
-    // your code here
+    var age = window.prompt("How old are you?");
+    var gender = window.prompt("Are you male or female or offended?");
+    var town = window.prompt("Where do you live?");
+
+    if (confirm(age + " " + gender + " " + town)) {
+
+    }else {
+        var age = window.prompt("How old are you?");
+        var gender = window.prompt("Are you male or female or offended?");
+        var town = window.prompt("Where do you live?");
+    }
 
 })();
