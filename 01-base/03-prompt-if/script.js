@@ -11,6 +11,12 @@
 
 (function() {
 
-  // your code here
+    var answer = window.prompt("Do you want some cake?");
+
+    if (answer === "yes") {
+        alert("Congratulations!");
+    } else {
+        alert("More cake for me then :p");
+    }
 
 })();
