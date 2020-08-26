@@ -12,5 +12,11 @@
 (function() {
 
     // your code here
+    var buttons = document.getElementsByTagName("button");
+    for (x = 0; x < buttons.length; x++) {
+        buttons[x].addEventListener("click", function () {
+            document.body.style.backgroundColor = this.id;
+        });
+    }
 
 })();
