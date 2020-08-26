@@ -12,5 +12,24 @@
 (function() {
 
     // your code here
+        document.querySelector("button").onclick = function (event) {
+
+            let today = new Date();
+            let dobday = document.getElementById("dob-day").value;
+            let dobmth = document.getElementById("dob-month").value;
+            let dobyr = document.getElementById("dob-year").value;
+            let age = today.getFullYear() - dobyr;
+            let m = today.getMonth() - (dobmth - 1);
+
+            if (m < 0 || (m === 0 && today.getDate() < dobday)){
+                age = age - 1;
+            }
+
+            alert(age);
+
+
+
+        
+    }
 
 })();
