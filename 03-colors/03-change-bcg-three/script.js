@@ -12,5 +12,11 @@
 (function() {
 
     // your code here
+    run.addEventListener('click', function () {
+        for (var x = 0; x <= 6; x++) {
+            color = "#" + Math.floor(Math.random() * 16777215).toString(16);
+            document.body.style.backgroundColor = color;
+        }
+    })
 
 })();
