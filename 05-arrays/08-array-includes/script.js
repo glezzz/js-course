@@ -31,7 +31,7 @@
         if (fruits.includes("apple")){
             console.log("yes");
         } else {
-            console.log(no);
+            console.log("no");
         }
     })
 })();
