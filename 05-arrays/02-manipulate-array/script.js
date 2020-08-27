@@ -25,5 +25,14 @@
     ];
 
     // your code here
+    document.querySelector("button").onclick = function (event){
+        fruits.shift();
+        fruits.pop();
+        fruits.unshift("banana");
+        fruits.push("kiwi");
+
+        console.log(fruits)
+    }
+
 
 })();
