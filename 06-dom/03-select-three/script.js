@@ -12,5 +12,10 @@
 (function() {
 
     // your code here
+    var x, i;
+    x = document.querySelectorAll(".target");
+    for (i = 0; i < x.length; i++) {
+        x[i].textContent= "owned";
+    }
 
 })();
