@@ -11,6 +11,22 @@
 
 (function() {
 
+    var age = prompt("How old are you?");
+    var gender = prompt("What gender are you?");
+    var town = prompt("Where do you live?");
+
+    if(confirm(age + " " + gender + " " + town)){
+
+    }else {
+        prompt("How old are you?");
+        prompt("What gender are you?");
+        prompt("Where do you live?");
+
+    }
+
+})();
+
+/* first attempt
     var age = window.prompt("How old are you?");
     var gender = window.prompt("Are you male or female or offended?");
     var town = window.prompt("Where do you live?");
@@ -22,5 +38,4 @@
         var gender = window.prompt("Are you male or female or offended?");
         var town = window.prompt("Where do you live?");
     }
-
-})();
+ */
