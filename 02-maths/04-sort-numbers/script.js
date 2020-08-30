@@ -12,7 +12,23 @@
 (function() {
 
     // to get the value of an input: document.getElementById("element-id").value
-    var values = document.getElementById("numbers").value;
+
+    document.getElementById("run").addEventListener("click", function() {
+
+        // your code here
+        var values = document.getElementById("numbers").value;
+        var numArray = [2, 4, 14, 10, 90, 23, 16];
+
+
+        numArray.sort((a,b) => a-b);
+        alert(numArray);
+
+    });
+
+})();
+
+/* first attempt
+var values = document.getElementById("numbers").value;
     var numArray = [2, 4, 14, 10, 90, 23, 16];
 
     document.getElementById("run").addEventListener("click", function() {
@@ -20,7 +36,4 @@
         // your code here
         numArray.sort((a,b)=> a - b);
         alert(numArray);
-
-    });
-
-})();
+ */
