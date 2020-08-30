@@ -12,9 +12,16 @@
 (function() {
 
     // your code here
+    var name = prompt("Enter your name, please")
 
+    alert("Hello, " + name + "!");
+
+
+
+})();
+
+    /* first attempt
     (function() {
         var name = window.prompt("Enter your name: ");
         alert("Hello " + name + "!");
-
-})();
+     */
