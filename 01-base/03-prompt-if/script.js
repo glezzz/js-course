@@ -11,12 +11,22 @@
 
 (function() {
 
-    var answer = window.prompt("Do you want some cake?");
+    var answer = prompt("Do you want some cake?");
+
+    if (answer === "yes"){
+        alert("Congratulations!");
+    }else{
+        alert("More cake for me then :p!");
+    }
+
+})();
+
+/* first attempt
+var answer = window.prompt("Do you want some cake?");
 
     if (answer === "yes") {
         alert("Congratulations!");
     } else {
         alert("More cake for me then :p");
     }
-
-})();
+ */
