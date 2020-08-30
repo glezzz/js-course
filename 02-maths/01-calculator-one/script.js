@@ -13,6 +13,36 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     document.getElementById("addition").addEventListener("click", function() {
+        // perform an addition
+        let a = parseInt(document.getElementById("op-one").value);
+        let b = parseInt(document.getElementById("op-two").value);
+        alert(a + b);
+    });
+
+    document.getElementById("substraction").addEventListener("click", function() {
+        // perform an substraction
+        let a = parseInt(document.getElementById("op-one").value);
+        let b = parseInt(document.getElementById("op-two").value);
+        alert(a - b);
+    });
+
+    document.getElementById("multiplication").addEventListener("click", function() {
+        // perform an multiplication
+        let a = parseInt(document.getElementById("op-one").value);
+        let b = parseInt(document.getElementById("op-two").value);
+        alert(a * b);
+    });
+
+    document.getElementById("division").addEventListener("click", function() {
+        // perform an division
+        let a = parseInt(document.getElementById("op-one").value);
+        let b = parseInt(document.getElementById("op-two").value);
+        alert(a / b);
+    })
+})();
+
+/* first attempt
+document.getElementById("addition").addEventListener("click", function() {
         input()
         alert(one + two);
 
@@ -41,5 +71,4 @@
         one = parseInt(document.getElementById("op-one").value);
         two = parseInt(document.getElementById("op-two").value);
     }
-
-})();
+ */
