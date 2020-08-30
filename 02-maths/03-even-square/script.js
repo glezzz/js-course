@@ -14,7 +14,19 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
-        var msg = "";
+
+        for (i = 1; i <= 21; i++){
+
+            alert(i * i);
+
+        }
+
+    });
+
+})();
+
+/* first attempt
+var msg = "";
         var sum = 0;
 
         for (var x = 1; x <= 21; x++) {
@@ -22,7 +34,4 @@
             var msg  = msg + square + "\n";
         }
         alert(msg);
-
-    });
-
-})();
+ */
