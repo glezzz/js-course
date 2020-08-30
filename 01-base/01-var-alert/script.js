@@ -12,8 +12,14 @@
 (function() {
 
     // your code here
+    var msg = "Hello, World!"
 
-    var randomname = "Hello, world!";
-    alert(randomname);
+    alert(msg);
 
 })();
+
+/* first attempt
+var randomname = "Hello, world!";
+alert(randomname);
+
+ */
