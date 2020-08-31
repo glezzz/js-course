@@ -12,5 +12,18 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        var password = document.getElementById("pass-one");
+        var reenter = document.getElementById("pass-two");
+
+        if (password.value === reenter.value){
+
+        }else{
+            password.classList.add("error")
+            reenter.classList.add("error")
+        }
+
+    })
 
 })();
