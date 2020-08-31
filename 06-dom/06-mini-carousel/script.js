@@ -20,5 +20,19 @@
     ];
 
     // your code here
+    let image = document.getElementsByTagName("img");
+    let i = 0;
+
+    function nextPic() {
+        i++;
+        i = i % gallery.length;
+        return gallery[i];
+    }
+
+    document.getElementById("next").addEventListener("click", function (){
+
+        image[0].setAttribute("src", nextPic());
+        
+    });
 
 })();
