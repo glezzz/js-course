@@ -12,5 +12,12 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").addEventListener("keyup", function (){
+        var password = document.getElementById("pass-one").value;
+
+        if (password.match(/[0-9]{2}/) && password.length >= 8){
+            validity.innerHTML = "Ok"
+        }
+    });
 
 })();
