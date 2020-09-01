@@ -12,5 +12,10 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").setAttribute("maxlength", "10");
+    document.getElementById("pass-one").onchange = function (){
+        var x = document.getElementById("pass-one").value.length;
+        counter.innerHTML = x + "/10"
+    };
 
 })();
