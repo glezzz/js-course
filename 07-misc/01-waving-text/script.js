@@ -12,6 +12,22 @@
 (function() {
 
     // your code here
-    document.getElementById("target").style.fontSize = "xx-small"
+    var text = document.getElementById("target").textContent;
+    document.getElementById("target").innerHTML = " ";
+
+    let j = 1;     // var for fontsize number (1-7)
+    let n = 1;
+    for (let i = 0; i < text.length; i++){
+        var y = text.charAt(i).fontsize(j);
+        document.getElementById("target").innerHTML += y;
+        if (i % 7 === 0){
+            n++;
+        }
+        if (n % 2 === 0){
+            j++;
+        }else {
+            j--;
+        }
+    }
 
 })();
