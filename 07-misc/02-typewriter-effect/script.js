@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
+    var text = document.getElementById("target").textContent;
+    var speed = 75;
+    var i = 0;
+    document.getElementById("target").innerHTML = " ";
+
+
+   function typeWriter() {
+       if (i < text.length){
+           document.getElementById("target").innerHTML += text.charAt(i);
+           i++;
+           setTimeout(typeWriter, speed);
+       }
+
+   }
+   typeWriter();
 
 })();
