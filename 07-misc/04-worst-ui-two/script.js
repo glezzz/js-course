@@ -18,56 +18,61 @@
     let btnFour = document.getElementById("part-four");
     let i = 0;  //value
 
-    btnOne.onclick = function (){
+    btnOne.onclick = function () {
         i = parseInt(btnOne.innerHTML); // without this it would start from 1 instead of from 460
-        if (i < btnOne.dataset.max){    //if value remains under data-max, increase value by one when
+        if (i < btnOne.dataset.max) {    //if value remains under data-max, increase value by one when
             i++;                        // clicking the button
-            btnOne.innerHTML = "0" + i;    // display that value in the button
-        }else{
+            btnOne.innerHTML = i;    // display that value in the button
+        } else {
             btnOne.innerHTML = btnOne.dataset.min;  // else select data-min
         }
+        selectedNr()
     }
 
-    btnTwo.onclick = function (){
+    btnTwo.onclick = function () {
         i = parseInt(btnTwo.innerHTML);
-        if (i < btnTwo.dataset.max){
+        if (i < btnTwo.dataset.max) {
             i++;
-            if (i < 10){
-                i = "0" + i;        // numbers 1-10 must have a leading 0
+            if (i < 10) {
+               i = "0" + i;        // numbers 1-10 must have a leading 0
             }
             btnTwo.innerHTML = i;    // the rest stays the same
-        }else{
+        } else {
             btnTwo.innerHTML = btnTwo.dataset.min;
         }
+        selectedNr()
     }
 
-    btnThree.onclick = function (){
+    btnThree.onclick = function () {
         i = parseInt(btnThree.innerHTML);
-        if (i < btnThree.dataset.max){
+        if (i < btnThree.dataset.max) {
             i++;
-            if (i < 10){
+            if (i < 10) {
                 i = "0" + i;        // numbers 1-10 must have a leading 0
             }
             btnThree.innerHTML = i;    // the rest stays the same
-        }else{
+        } else {
             btnThree.innerHTML = btnThree.dataset.min;
         }
+        selectedNr()
     }
 
-    btnFour.onclick = function (){
+    btnFour.onclick = function () {
         i = parseInt(btnFour.innerHTML);
-        if (i < btnFour.dataset.max){
+        if (i < btnFour.dataset.max) {
             i++;
-            if (i < 10){
+            if (i < 10) {
                 i = "0" + i;        // numbers 1-10 must have a leading 0
             }
             btnFour.innerHTML = i;    // the rest stays the same
-        }else{
+        } else {
             btnFour.innerHTML = btnFour.dataset.min;
         }
+        selectedNr()
     }
-    
 
-
+    function selectedNr() {
+        document.getElementById("target").innerHTML = "0" + btnOne.innerHTML + btnTwo.innerHTML + btnThree.innerHTML + btnFour.innerHTML;
+    }       // this function makes the UI update with every click
 
 })();
