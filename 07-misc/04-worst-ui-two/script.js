@@ -12,5 +12,62 @@
 (function() {
 
     // your code here
+    let btnOne = document.getElementById("part-one");
+    let btnTwo = document.getElementById("part-two");
+    let btnThree = document.getElementById("part-three");
+    let btnFour = document.getElementById("part-four");
+    let i = 0;  //value
+
+    btnOne.onclick = function (){
+        i = parseInt(btnOne.innerHTML); // without this it would start from 1 instead of from 460
+        if (i < btnOne.dataset.max){    //if value remains under data-max, increase value by one when
+            i++;                        // clicking the button
+            btnOne.innerHTML = "0" + i;    // display that value in the button
+        }else{
+            btnOne.innerHTML = btnOne.dataset.min;  // else select data-min
+        }
+    }
+
+    btnTwo.onclick = function (){
+        i = parseInt(btnTwo.innerHTML);
+        if (i < btnTwo.dataset.max){
+            i++;
+            if (i < 10){
+                i = "0" + i;        // numbers 1-10 must have a leading 0
+            }
+            btnTwo.innerHTML = i;    // the rest stays the same
+        }else{
+            btnTwo.innerHTML = btnTwo.dataset.min;
+        }
+    }
+
+    btnThree.onclick = function (){
+        i = parseInt(btnThree.innerHTML);
+        if (i < btnThree.dataset.max){
+            i++;
+            if (i < 10){
+                i = "0" + i;        // numbers 1-10 must have a leading 0
+            }
+            btnThree.innerHTML = i;    // the rest stays the same
+        }else{
+            btnThree.innerHTML = btnThree.dataset.min;
+        }
+    }
+
+    btnFour.onclick = function (){
+        i = parseInt(btnFour.innerHTML);
+        if (i < btnFour.dataset.max){
+            i++;
+            if (i < 10){
+                i = "0" + i;        // numbers 1-10 must have a leading 0
+            }
+            btnFour.innerHTML = i;    // the rest stays the same
+        }else{
+            btnFour.innerHTML = btnFour.dataset.min;
+        }
+    }
+    
+
+
 
 })();
