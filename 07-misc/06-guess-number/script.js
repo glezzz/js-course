@@ -9,8 +9,27 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
+    let x = Math.floor(Math.random() * 101);
+    var pick = prompt("Pick a number between 1 and 100");
+    let counter = 1
+
+    while (pick != x) {
+        counter++;
+
+        if (pick > x) {
+            var pick = prompt("Lower");
+
+        }
+        if (pick < x) {
+            var pick = prompt("Higher");
+
+        }
+    }
+
+    alert("That's it! You needed " + counter + " guesses");
+
 
 })();
