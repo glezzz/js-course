@@ -12,5 +12,15 @@
 (function() {
 
     // your code here
+    var count = 0;
+    var countBtn = document.getElementById("increment");
+    var displayCount = document.getElementById("target");
+
+    countBtn.onclick = function () {
+        count++;
+        displayCount.innerHTML = count;
+        localStorage.setItem("count", count);
+        
+    }
 
 })();
