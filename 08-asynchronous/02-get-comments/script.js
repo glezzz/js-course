@@ -9,6 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
-    // your code here
+// your code here
+let run = document.getElementById("run")
+run.addEventListener("click", getPostsWithComments)
+
+function getPostsWithComments (){
+    window.lib.getPosts(function (error, posts) {
+        posts.forEach(post => {
+            window.lib.getComments(post.id, function (error, comments){
+                post.comment = comments;
+
+            })
+        });
+
 })();
