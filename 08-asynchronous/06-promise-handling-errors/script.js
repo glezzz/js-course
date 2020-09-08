@@ -11,4 +11,19 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", arrayOfPeople)
+
+    function arrayOfPeople() {
+        return new Promise((resolve, reject) => {
+            resolve(window.lib.getPersons())
+        })
+
+            .then((result) => {
+                console.log(result)
+            }).catch(function (error) {
+                console.error(error)
+            })
+    }
+
 })();
