@@ -11,4 +11,6 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", getPostsWithComments)
 })();
