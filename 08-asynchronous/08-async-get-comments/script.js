@@ -11,4 +11,21 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", getCommentsAsync)
+
+    async function getCommentsAsync() {
+
+        try {
+            let showPosts = await window.lib.getPosts();
+            showPosts.forEach(function (posts) {
+                let showComments = window.lib.getComments(posts.id)
+                posts.comments = showComments;
+                console.log(posts);
+            })
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 })();
