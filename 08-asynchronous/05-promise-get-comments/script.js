@@ -11,4 +11,24 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", getPostsWithComments)
+
+    function getPostsWithComments() {
+        return new Promise((resolve, reject) => {
+            resolve(window.lib.getPosts())
+        })
+            .then((result) => result.forEach(function (post) {
+                new Promise((resolve, reject) => {
+                    let result = window.lib.getComments(post.id)
+                    resolve(result)
+                }).then(result => console.log(result))
+
+            }))
+
+            .catch(function (error) {
+                console.log(error)
+            })
+
+    }
 })();
