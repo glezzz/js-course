@@ -15,7 +15,7 @@
     run.addEventListener("click", getPostsWithComments)
 
     function getPostsWithComments() {
-        return new Promise((resolve, reject) => {
+        new Promise((resolve, reject) => {
             resolve(window.lib.getPosts())
         })
             .then((result) => result.forEach(function (post) {
