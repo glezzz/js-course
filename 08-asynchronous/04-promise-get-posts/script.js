@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", getPostsConsole)
+
+    function getPostsConsole() {
+        return new Promise((resolve, reject) => {
+            resolve(window.lib.getPosts())
+        })
+            .then(result => {
+                console.log(result);
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
+    }
 })();
