@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", function () {
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(data => appendData(data))
+
+        function appendData(data) {
+            let xName = document.getElementById("hero-name").value;
+            let xAltEgo = document.getElementById("hero-alter-ego").value;
+            let xPowers = document.getElementById("hero-powers").value;
+            let id = data.length + 1; // we do +1 to increase id number
+            data[data.length] = {
+                id: id,
+                name: xName,
+                alterEgo: xAltEgo,
+                abilities: xPowers,
+            };
+            console.log(data);
+        }
+    });
+
 })();
