@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let run = document.getElementById("run")
+    run.addEventListener("click", function () {
+        fetch("http://localhost:3000/heroes")
+            .then(response => response.json())
+            .then(data => appendData(data))
+
+        function appendData(data) {
+            let input = document.getElementById("hero-id").value;
+            let filterOut = data.filter(data => data.id != input);
+
+            console.log(filterOut);
+        }
+
+    });
 })();
